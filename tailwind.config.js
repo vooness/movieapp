@@ -12,7 +12,21 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        fadeInLeft: {
+          '0%': { opacity: 0, transform: 'translateX(-50px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+      },
+      animation: {
+        fadeInLeft: 'fadeInLeft 1s ease-in-out forwards',
+        fadeIn: 'fadeIn 1s ease-in-out forwards',
+      },
     },
   },
   plugins: [],
-}
+};
